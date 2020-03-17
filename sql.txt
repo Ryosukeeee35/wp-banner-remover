@@ -1,0 +1,22 @@
+テーブル作成
+CREATE TABLE `banner_remover` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `name` TEXT NOT NULL,
+    `registration_date` DATETIME NOT NULL,
+    `category` TEXT NOT NULL,
+    `img_name` TEXT NOT NULL,
+    `img_url` TEXT NOT NULL,
+    `period` DATETIME NOT NULL
+);
+
+テーブル削除
+DROP TABLE `banner_remover` ;
+
+
+テーブルに中身入れる
+INSERT INTO `banner_remover`
+(`registration_date`, `category`, `img_name`, `img_url`, `period`)
+VALUES ("2020/03/10", "販促", "３月のセール", "https://manabito.biz/wp-content/themes/manabito/images/home/manabu-step03.svg", "2020/03/31");
+
+テーブルの中身消す
+DELETE FROM `banner_remover` WHERE `id` = 1
